@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo-DH.png";
 
 const SiderBar = () => {
@@ -19,10 +20,10 @@ const SiderBar = () => {
         <hr className='sidebar-divider my-0' />
 
         <li className='nav-item active'>
-          <a className='nav-link' href='/'>
+          <Link className='nav-link' to='/'>
             <i className='fas fa-fw fa-tachometer-alt'></i>
             <span>Dashboard - DH movies</span>
-          </a>
+          </Link>
         </li>
 
         <hr className='sidebar-divider' />
@@ -50,6 +51,34 @@ const SiderBar = () => {
             <i className='fas fa-fw fa-table'></i>
             <span>Tables</span>
           </a>
+        </li>
+
+        {/* <!-- Divider --> */}
+        <hr className='sidebar-divider d-none d-md-block' />
+
+        <div className='sidebar-heading'>Sections</div>
+
+        <li className='nav-item'>
+          <Link className='nav-link collapsed' to='/genres-in-database'>
+            <i className='fas fa-fw fa-folder'></i>
+            <span>Generos in database</span>
+          </Link>
+        </li>
+
+        {/* <!-- Nav Item - Charts --> */}
+        <li className='nav-item'>
+          <Link className='nav-link' to='/content-row-movies'>
+            <i className='fas fa-fw fa-chart-area'></i>
+            <span>Content row movies</span>
+          </Link>
+        </li>
+
+        {/* <!-- Nav Item - Tables --> */}
+        <li className='nav-item'>
+          <Link className='nav-link' to='/last-movie-in-database'>
+            <i className='fas fa-fw fa-table'></i>
+            <span>Last movie in database</span>
+          </Link>
         </li>
 
         {/* <!-- Divider --> */}
