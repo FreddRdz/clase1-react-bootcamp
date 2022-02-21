@@ -1,7 +1,6 @@
 import ContentRowMovies from "./ContentRowMovies";
 import Chart from "./Chart";
-import { LastMovieInDb } from "./LastMovieInDb";
-import { GenresInDeb } from "./GenresInDeb";
+import { ContentRowCenter } from "./ContentRowCenter";
 
 const ContentRowTop = () => {
   return (
@@ -10,10 +9,7 @@ const ContentRowTop = () => {
         <h1 className='h3 mb-0 text-gray-800'>App Dashboard</h1>
       </div>
       <ContentRowMovies />
-      <div className='row'>
-        <LastMovieInDb />
-        <GenresInDeb />
-      </div>
+      <ContentRowCenter />
       <Chart />
     </div>
   );
